@@ -4,29 +4,29 @@
 
 **Prism Code Plus**의 공개 이슈 트래커에 오신 것을 환영합니다! 🎉
 
-This repository is dedicated to bug reports, feature requests, and community discussions for Prism Code Plus - an autonomous AI coding agent for Visual Studio Code.
+이 저장소는 Visual Studio Code용 자율형 AI 코딩 에이전트인 Prism Code Plus의 버그 보고, 기능 요청, 커뮤니티 토론을 위한 공간입니다.
 
-## 🤖 About Prism Code Plus
+## 🤖 Prism Code Plus 소개
 
-Prism Code Plus is a powerful VS Code extension that brings autonomous AI coding capabilities right into your IDE. It supports multiple AI providers including:
+Prism Code Plus는 자율적인 AI 코딩 기능을 IDE에 직접 제공하는 강력한 VS Code 확장 프로그램입니다. 다음과 같은 다양한 AI 제공업체를 지원합니다:
 
 - 🧠 **Anthropic Claude** (Sonnet 4.5, Opus 4, Haiku)
 - 🔮 **Google Gemini** (2.5 Pro, 2.5 Flash)
 - 💬 **OpenAI GPT** (GPT-4o, o1, o3-mini)
-- 🌐 **OpenRouter** (Access to 200+ models)
-- 🦙 **Local Models** via Ollama
-- ...and many more!
+- 🌐 **OpenRouter** (200개 이상의 모델 접근)
+- 🦙 **로컬 모델** Ollama를 통한 지원
+- ...그 외 다수!
 
-### Key Features
+### 주요 기능
 
-✨ **Autonomous Coding** - Creates, edits files, and runs commands with your approval
-🌍 **Browser Integration** - Scrapes web content and researches documentation
-🔧 **MCP Support** - Extend with Model Context Protocol servers
-⚡ **Bring Your Own Keys** - Use your own API keys or our managed service
-🎯 **Multi-Model Support** - Switch between providers seamlessly
-📝 **Task Management** - Built-in task tracking and history
+✨ **자율 코딩** - 승인을 받아 파일을 생성, 편집하고 명령을 실행
+🌍 **브라우저 통합** - 웹 콘텐츠를 스크래핑하고 문서를 조사
+🔧 **MCP 지원** - Model Context Protocol 서버로 확장
+⚡ **자체 키 사용** - 자신의 API 키 또는 관리 서비스 사용
+🎯 **멀티 모델 지원** - 제공업체 간 원활한 전환
+📝 **작업 관리** - 내장된 작업 추적 및 히스토리
 
-## 📢 How to Use This Repository
+## 📢 이 저장소 사용 방법
 
 이 저장소는 **Prism Code Plus**의 이슈를 추적하고 커뮤니티 피드백을 받기 위한 공간입니다. 아래 가이드를 따라 효과적으로 이슈를 등록해주세요.
 
