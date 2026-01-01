@@ -1,0 +1,113 @@
+name: 🎨 UI/UX改善 (日本語)
+description: ユーザーインターフェースまたはユーザーエクスペリエンスの改善を提案します
+labels: ['ui/ux']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **UI/UX改善の提案をありがとうございます!**
+        より良いユーザーエクスペリエンスを作るために、皆様のご意見が重要です。
+
+  - type: dropdown
+    id: ui-ux-category
+    attributes:
+      label: 改善カテゴリー
+      description: どの部分のUI/UXを改善したいですか?
+      options:
+        - チャットインターフェース
+        - 設定画面
+        - ファイルツリー / エクスプローラー
+        - コードエディター統合
+        - 通知 & フィードバック
+        - アイコン / 色 / テーマ
+        - ショートカット / キーボード操作
+        - オンボーディング / チュートリアル
+        - その他
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-experience
+    attributes:
+      label: 現在のユーザーエクスペリエンス
+      description: 現在どのような不便さや問題がありますか?
+      placeholder: |
+        例:
+        - [機能]を使用するとき、[動作]が直感的ではありません
+        - [UI要素]が小さすぎてクリックしにくいです
+        - [タスク]を実行するには多くのステップを経る必要があります
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: 提案する改善事項
+      description: どのように改善されるとよいか具体的に説明してください。
+      placeholder: |
+        例:
+        - [UI要素]を[位置]に移動するとアクセスしやすくなります
+        - [ボタン]にツールチップを追加すると使い方がわかりやすくなります
+        - [ショートカット]を追加すると作業効率が上がります
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 使用頻度
+      description: このUI/UX要素をどのくらいの頻度で使用しますか?
+      options:
+        - 非常に頻繁 (1日に複数回)
+        - 頻繁 (1日に1回以上)
+        - 普通 (週に複数回)
+        - たまに (週に1回未満)
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: デザインモックアップ / スクリーンショット (オプション)
+      description: |
+        提案するUI/UXを視覚的に示すモックアップ、スクリーンショット、または他のツールの類似UIの例があれば添付してください。
+        画像をドラッグ&ドロップまたは貼り付けできます。
+    validations:
+      required: false
+
+  - type: textarea
+    id: similar-examples
+    attributes:
+      label: 類似事例
+      description: 他のツールやアプリで類似機能がうまく実装されている事例があれば共有してください。
+      placeholder: |
+        例:
+        - VS Codeの[機能]のように実装されると良いと思います
+        - [ツール名]の[UI]が良い参考事例です
+    validations:
+      required: false
+
+  - type: dropdown
+    id: accessibility
+    attributes:
+      label: アクセシビリティ関連
+      description: この改善事項はアクセシビリティ(視覚、聴覚、運動障害など)に関連していますか?
+      options:
+        - いいえ
+        - はい - 視覚関連
+        - はい - キーボードナビゲーション関連
+        - はい - スクリーンリーダー関連
+        - はい - その他のアクセシビリティ
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 追加情報
+      description: その他の役立つ情報を追加してください。
+    validations:
+      required: false

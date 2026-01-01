@@ -1,0 +1,97 @@
+name: 📖 Documentation Improvement (English)
+description: Suggest improvements for documentation errors, omissions, or enhancements
+labels: ['documentation']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you for contributing to documentation improvements!**
+        Clear and accurate documentation helps all users.
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Document Type
+      description: What type of documentation is this suggestion for?
+      options:
+        - Usage Guide / Tutorial
+        - API Documentation
+        - Configuration Guide
+        - Example Code
+        - FAQ
+        - README / Getting Started
+        - Release Notes
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: doc-location
+    attributes:
+      label: Document Location
+      description: Please provide the URL or location of the relevant documentation.
+      placeholder: 'e.g., https://prismcode.plus/docs/getting-started or "Installation section in README.md"'
+    validations:
+      required: false
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What kind of issue is this?
+      options:
+        - Incorrect information (wrong description, typos)
+        - Missing information
+        - Unclear explanation
+        - Outdated information (needs update)
+        - Example code errors
+        - Translation related
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Document Content
+      description: Please quote the current document content that has the issue.
+      placeholder: |
+        Currently the document says:
+        > "..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Please specifically describe what is wrong or insufficient.
+      placeholder: |
+        e.g.,
+        - The description in step 3 differs from the actual behavior
+        - The explanation for [feature] is missing
+        - The screenshot is outdated and different from the current UI
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: Please suggest how it could be improved.
+      placeholder: |
+        It would be good to modify/add as follows:
+        - [Suggested content]
+        - Or provide example code
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Please add any helpful information such as screenshots or reference links.
+    validations:
+      required: false

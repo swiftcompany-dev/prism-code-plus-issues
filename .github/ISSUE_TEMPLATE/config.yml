@@ -1,0 +1,20 @@
+blank_issues_enabled: false
+contact_links:
+    - name: 📖 Documentation (English)
+      url: https://github.com/swiftcompany-dev/prism-code-plus-issues/blob/main/README.md
+      about: English documentation and detailed guide
+    - name: 📖 문서 (한국어)
+      url: https://github.com/swiftcompany-dev/prism-code-plus-issues/blob/main/README.ko.md
+      about: 한국어 문서 및 상세 가이드
+    - name: 📖 ドキュメント (日本語)
+      url: https://github.com/swiftcompany-dev/prism-code-plus-issues/blob/main/README.ja.md
+      about: 日本語のドキュメントと詳細ガイド
+    - name: 📖 文档 (中文)
+      url: https://github.com/swiftcompany-dev/prism-code-plus-issues/blob/main/README.zh.md
+      about: 中文文档和详细指南
+    - name: 👋 Prism Discord
+      url: https://discord.gg/prism-code
+      about: Join our Discord community for discussions and support
+    - name: 💬 GitHub Discussions
+      url: https://github.com/swiftcompany-dev/prism-code-plus/discussions
+      about: For general questions and discussions

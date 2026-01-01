@@ -1,0 +1,88 @@
+name: ✨ Feature Request (English)
+description: Suggest a new feature or improvement
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you for sharing your ideas for Prism Code Plus!**
+        Before submitting a feature request, please search [existing requests](../../issues?q=is%3Aissue+label%3Aenhancement) to avoid duplicates.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to Solve
+      description: Describe the problem or inconvenience this feature would address. Clear use cases are helpful.
+      placeholder: |
+        e.g., When using Prism in [situation], [problem] occurs.
+        This causes [inconvenience/limitation].
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe in detail the desired feature or behavior.
+      placeholder: |
+        e.g., Adding [feature] would provide [benefit].
+        How it works:
+        1. When the user performs [action]
+        2. Prism executes [operation]
+        3. [Result] is displayed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives (Optional)
+      description: If you've considered other solutions or workarounds, please describe them.
+      placeholder: Currently working around it like this...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: Please select the category this feature belongs to.
+      options:
+        - AI/Model Related
+        - Code Editing & Generation
+        - UI/UX
+        - Performance Optimization
+        - Integration & Extensibility (MCP, etc.)
+        - File & Project Management
+        - Debugging & Error Handling
+        - Settings & Customization
+        - Other
+      default: 8
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (Subjective)
+      description: How important do you think this feature is?
+      options:
+        - Very High - Significant limitations in current use
+        - High - Frequently needed and major impact on efficiency
+        - Medium - Would be nice but not essential
+        - Low - Nice-to-have
+      default: 2
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Please add any helpful information such as screenshots, example code, or references.
+      placeholder: |
+        - Links to similar features in other tools
+        - Mockups or screenshots
+        - Code examples
+    validations:
+      required: false

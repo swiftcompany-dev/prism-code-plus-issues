@@ -1,0 +1,69 @@
+name: 🐛 错误报告 (中文)
+description: 报告错误
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **重要:** 所有错误报告都应该能够使用Claude Sonnet 4.5重现。Prism使用复杂的提示，性能较低的模型可能无法按预期工作。
+  - type: dropdown
+    id: plugin-type
+    attributes:
+      label: 插件类型
+      description: 您要报告哪个插件的错误?
+      options:
+        - VSCode扩展
+        - CLI
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: prism-version
+    attributes:
+      label: Prism Code+ 版本
+      description: 您使用的是哪个版本的Prism Code+? (可以在设置视图的底部找到)
+      placeholder: '例如: 1.2.3'
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么?
+      description: 另外，您期望发生什么?
+      placeholder: 告诉我们您看到了什么!
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重现步骤
+      description: 如何触发这个错误? 请逐步告诉我们。
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  - type: input
+    id: provider-model
+    attributes:
+      label: 提供商/模型
+      description: 问题发生时您使用的是哪个提供商和模型?
+      placeholder: '例如: prism:anthropic/claude-sonnet-4.5, gemini:gemini-2.5-pro-exp-03-25'
+    validations:
+      required: false
+  - type: textarea
+    id: system-info
+    attributes:
+      label: 系统信息
+      description: 您使用的是什么操作系统和硬件?
+      placeholder: |
+        操作系统: Windows 11、macOS Sonoma、Ubuntu 22.04等
+        硬件: 如果相关，CPU、GPU、RAM规格
+        例如:
+        OS: Windows 11
+        CPU: Intel Core i7-11700K
+        GPU: NVIDIA GeForce RTX 3070
+        RAM: 32GB DDR4
+    validations:
+      required: false

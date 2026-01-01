@@ -1,0 +1,88 @@
+name: ✨ 機能リクエスト (日本語)
+description: 新しい機能や改善を提案します
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Prism Code Plusのアイデアを共有していただきありがとうございます!**
+        機能リクエストを送信する前に、[既存のリクエスト](../../issues?q=is%3Aissue+label%3Aenhancement)を検索して重複を避けてください。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい問題
+      description: この機能が解決する問題や不便さを説明してください。明確なユースケースがあると助かります。
+      placeholder: |
+        例: Prismを[状況]で使用するとき、[問題]が発生します。
+        これにより[不便/制限]が生じます。
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 提案する解決方法
+      description: 希望する機能や動作を具体的に説明してください。
+      placeholder: |
+        例: [機能]を追加すると[メリット]が得られます。
+        動作方式:
+        1. ユーザーが[アクション]を実行すると
+        2. Prismが[動作]を実行し
+        3. [結果]が表示されます。
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案 (オプション)
+      description: 検討した他の解決方法や回避策があれば説明してください。
+      placeholder: 現在はこのように回避しています...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: 機能カテゴリー
+      description: この機能が属するカテゴリーを選択してください。
+      options:
+        - AI/モデル関連
+        - コード編集・生成
+        - UI/UX
+        - パフォーマンス最適化
+        - 統合・拡張性 (MCP等)
+        - ファイル・プロジェクト管理
+        - デバッグ・エラー処理
+        - 設定・カスタマイズ
+        - その他
+      default: 8
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度 (主観的)
+      description: この機能はどのくらい重要だと思いますか?
+      options:
+        - 非常に高い - 現在の使用に大きな制限がある
+        - 高い - 頻繁に必要で効率性に大きな影響
+        - 普通 - あると良いが必須ではない
+        - 低い - あれば嬉しい
+      default: 2
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 追加情報
+      description: スクリーンショット、サンプルコード、参考資料など、役立つ情報を追加してください。
+      placeholder: |
+        - 他のツールの類似機能へのリンク
+        - モックアップやスクリーンショット
+        - コード例
+    validations:
+      required: false

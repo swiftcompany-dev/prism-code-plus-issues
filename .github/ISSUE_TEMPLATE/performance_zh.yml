@@ -1,0 +1,131 @@
+name: ⚡ 性能问题 (中文)
+description: 报告缓慢响应、高资源使用等性能问题
+labels: ['performance']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **感谢您报告性能问题!**
+        提供具体信息将帮助我们更快地解决问题。
+
+  - type: dropdown
+    id: performance-type
+    attributes:
+      label: 性能问题类型
+      description: 这是什么类型的性能问题?
+      options:
+        - 响应速度慢
+        - CPU使用率高
+        - 内存使用量高
+        - 网络延迟
+        - UI渲染延迟 / 冻结
+        - 文件处理速度
+        - 启动时间延迟
+        - 其他
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: prism-version
+    attributes:
+      label: Prism Code+ 版本
+      description: 您使用的是哪个版本的Prism Code+?
+      placeholder: '例如: 1.2.3'
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: 问题情况
+      description: 请具体描述性能问题发生的情况。
+      placeholder: |
+        例如:
+        - 执行[任务]时需要[时间]
+        - 使用[功能]时CPU使用率上升至[百分比]%
+        - 在[情况]下VS Code冻结
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-performance
+    attributes:
+      label: 预期性能
+      description: 您期望什么样的性能水平?
+      placeholder: |
+        例如: 我期望[任务]在[时间]内完成。
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: 重现步骤
+      description: 请提供重现性能问题的步骤。
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: input
+    id: provider-model
+    attributes:
+      label: 提供商/模型
+      description: 问题发生时使用的AI提供商和模型
+      placeholder: '例如: anthropic/claude-sonnet-4.5'
+    validations:
+      required: false
+
+  - type: textarea
+    id: project-details
+    attributes:
+      label: 项目信息
+      description: 项目大小或特性可能会影响性能。
+      placeholder: |
+        - 项目大小: 文件数、代码行数
+        - 文件类型: JavaScript、Python、Java等
+        - 项目结构: monorepo、常规项目等
+    validations:
+      required: false
+
+  - type: textarea
+    id: system-info
+    attributes:
+      label: 系统信息
+      description: 硬件规格信息
+      placeholder: |
+        OS: Windows 11 / macOS Sonoma / Ubuntu 22.04
+        CPU: 型号名称
+        RAM: 容量
+        磁盘: SSD / HDD
+
+        例如:
+        OS: macOS Sonoma
+        CPU: Apple M2 Pro
+        RAM: 32GB
+        磁盘: 1TB SSD
+    validations:
+      required: false
+
+  - type: textarea
+    id: profiling-data
+    attributes:
+      label: 性能分析数据 (可选)
+      description: |
+        如果您有VS Code性能分析数据，请附上。
+        - VS Code命令面板 (Cmd/Ctrl+Shift+P)
+        - 运行 "Developer: Show Running Extensions"
+        - 粘贴截图或数据
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 附加信息
+      description: 请添加截图、日志或任何其他有用的信息。
+    validations:
+      required: false

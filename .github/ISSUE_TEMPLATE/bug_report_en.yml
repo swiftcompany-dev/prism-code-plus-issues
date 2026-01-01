@@ -1,0 +1,69 @@
+name: 🐛 Bug Report (English)
+description: Report a bug
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Important:** All bug reports should be reproducible using Claude Sonnet 4.5. Prism uses complex prompts and may not work as expected with lower-performing models.
+  - type: dropdown
+    id: plugin-type
+    attributes:
+      label: Plugin Type
+      description: Which plugin are you reporting a bug for?
+      options:
+        - VSCode Extension
+        - CLI
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: prism-version
+    attributes:
+      label: Prism Code+ Version
+      description: Which version of Prism Code+ are you using? (You can find this at the bottom of the settings view)
+      placeholder: 'e.g., 1.2.3'
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also, what did you expect to happen?
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How do you trigger this bug? Please walk us through it step by step.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  - type: input
+    id: provider-model
+    attributes:
+      label: Provider/Model
+      description: Which provider and model were you using when the issue occurred?
+      placeholder: 'e.g., prism:anthropic/claude-sonnet-4.5, gemini:gemini-2.5-pro-exp-03-25'
+    validations:
+      required: false
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Information
+      description: What operating system and hardware are you using?
+      placeholder: |
+        OS: Windows 11, macOS Sonoma, Ubuntu 22.04, etc.
+        Hardware: CPU, GPU, RAM specs if relevant
+        Example:
+        OS: Windows 11
+        CPU: Intel Core i7-11700K
+        GPU: NVIDIA GeForce RTX 3070
+        RAM: 32GB DDR4
+    validations:
+      required: false

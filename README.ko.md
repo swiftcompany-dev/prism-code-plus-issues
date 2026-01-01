@@ -1,0 +1,321 @@
+# Prism Code Plus - Issue Tracker
+
+**Languages:** [🇺🇸 English](README.md) | [🇰🇷 한국어](README.ko.md) | [🇯🇵 日本語](README.ja.md) | [🇨🇳 中文](README.zh.md)
+
+**Prism Code Plus**의 공개 이슈 트래커에 오신 것을 환영합니다! 🎉
+
+This repository is dedicated to bug reports, feature requests, and community discussions for Prism Code Plus - an autonomous AI coding agent for Visual Studio Code.
+
+## 🤖 About Prism Code Plus
+
+Prism Code Plus is a powerful VS Code extension that brings autonomous AI coding capabilities right into your IDE. It supports multiple AI providers including:
+
+- 🧠 **Anthropic Claude** (Sonnet 4.5, Opus 4, Haiku)
+- 🔮 **Google Gemini** (2.5 Pro, 2.5 Flash)
+- 💬 **OpenAI GPT** (GPT-4o, o1, o3-mini)
+- 🌐 **OpenRouter** (Access to 200+ models)
+- 🦙 **Local Models** via Ollama
+- ...and many more!
+
+### Key Features
+
+✨ **Autonomous Coding** - Creates, edits files, and runs commands with your approval
+🌍 **Browser Integration** - Scrapes web content and researches documentation
+🔧 **MCP Support** - Extend with Model Context Protocol servers
+⚡ **Bring Your Own Keys** - Use your own API keys or our managed service
+🎯 **Multi-Model Support** - Switch between providers seamlessly
+📝 **Task Management** - Built-in task tracking and history
+
+## 📢 How to Use This Repository
+
+이 저장소는 **Prism Code Plus**의 이슈를 추적하고 커뮤니티 피드백을 받기 위한 공간입니다. 아래 가이드를 따라 효과적으로 이슈를 등록해주세요.
+
+---
+
+## 📝 이슈 등록 완벽 가이드
+
+### 🎯 시작하기 전에
+
+1. **기존 이슈 검색하기**
+   - [Issues 탭](../../issues)에서 동일하거나 유사한 이슈가 있는지 확인하세요
+   - 검색 필터를 활용하세요: `is:issue is:open [키워드]`
+   - 중복 이슈는 처리가 지연될 수 있습니다
+
+2. **어떤 템플릿을 사용할지 결정하기**
+   - 🐛 **버그 리포트**: 오류, 크래시, 예상치 못한 동작
+   - ✨ **기능 요청**: 새로운 기능이나 개선 아이디어
+   - 📖 **문서 개선**: 문서 오류, 누락, 설명 개선
+   - ⚡ **성능 이슈**: 느린 응답, 높은 리소스 사용
+   - 🎨 **UI/UX 개선**: 인터페이스나 사용성 개선
+
+---
+
+### 🐛 버그 리포트 작성하기
+
+**언제 사용하나요?**
+- 앱이 크래시되거나 오류가 발생할 때
+- 기능이 문서와 다르게 동작할 때
+- 예상치 못한 결과가 나올 때
+
+**작성 단계:**
+1. [Issues 페이지](../../issues)로 이동
+2. **New Issue** 버튼 클릭
+3. **🐛 버그 리포트** 템플릿 선택
+4. 필수 정보 입력:
+   - **플러그인 유형**: VSCode 확장 또는 CLI
+   - **Prism Code+ 버전**: 설정 화면 하단에서 확인 가능
+   - **문제 설명**: 무슨 일이 일어났고, 무엇을 기대했는지
+   - **재현 단계**: 다른 사람이 따라할 수 있는 단계별 설명
+   - **AI 모델**: 사용한 제공자와 모델 (예: `anthropic/claude-sonnet-4.5`)
+5. **Submit new issue** 클릭
+
+**좋은 버그 리포트 예시:**
+```markdown
+### 무슨 일이 발생했나요?
+파일 이름에 한글이 포함된 파일을 편집하려고 하면 "Permission denied" 오류가 발생합니다.
+UTF-8 인코딩된 파일명도 정상적으로 처리될 것으로 예상했습니다.
+
+### 재현 단계
+1. `테스트.py` 파일 생성
+2. Prism에게 "이 파일에 Hello World 출력하는 코드 추가해줘" 요청
+3. 오류 발생
+
+### 제공자/모델
+anthropic/claude-sonnet-4.5
+
+### 시스템 정보
+OS: macOS Sonoma 14.5
+CPU: Apple M2 Pro
+RAM: 32GB
+```
+
+---
+
+### ✨ 기능 요청 작성하기
+
+**언제 사용하나요?**
+- 새로운 기능을 제안할 때
+- 기존 기능의 개선을 원할 때
+- 더 나은 워크플로우를 제안할 때
+
+**작성 단계:**
+1. [Issues 페이지](../../issues)로 이동
+2. **New Issue** 버튼 클릭
+3. **✨ 기능 요청** 템플릿 선택
+4. 다음 정보를 명확하게 작성:
+   - **해결하고자 하는 문제**: 왜 이 기능이 필요한가?
+   - **제안하는 해결방법**: 구체적으로 어떻게 작동해야 하는가?
+   - **대안**: 현재 어떻게 우회하고 있는가?
+   - **기능 카테고리**: AI/모델, 코드 편집, UI/UX 등
+5. **Submit new issue** 클릭
+
+**좋은 기능 요청 예시:**
+```markdown
+### 해결하고자 하는 문제
+여러 파일을 동시에 수정할 때, Prism이 어떤 파일을 수정 중인지
+실시간으로 알기 어렵습니다. 특히 대규모 리팩토링 시 진행 상황을
+파악하기 힘듭니다.
+
+### 제안하는 해결방법
+채팅 창에 현재 작업 중인 파일 목록과 진행 상태를 표시하는
+"Progress Tracker" 패널을 추가하면 좋겠습니다.
+
+작동 방식:
+1. 다중 파일 작업 시작 시 자동으로 패널 표시
+2. 각 파일의 상태를 아이콘으로 표시 (⏳ 대기, ✏️ 작업 중, ✅ 완료)
+3. 클릭하면 해당 파일로 이동
+
+### 기능 카테고리
+UI/UX
+
+### 우선순위
+높음 - 자주 필요하고 효율성에 큰 영향
+```
+
+---
+
+### 📖 문서 개선 제안하기
+
+**언제 사용하나요?**
+- 문서에 오타나 오류가 있을 때
+- 설명이 불명확하거나 누락되었을 때
+- 예제 코드가 작동하지 않을 때
+
+**작성 팁:**
+- 문제가 있는 정확한 위치(URL 또는 섹션명)를 명시하세요
+- 현재 내용과 제안하는 개선 사항을 명확히 구분하세요
+- 가능하다면 수정된 내용을 직접 작성해주세요
+
+---
+
+### ⚡ 성능 이슈 보고하기
+
+**언제 사용하나요?**
+- 응답이 비정상적으로 느릴 때
+- CPU/메모리 사용량이 과도할 때
+- UI가 멈추거나 버벅거릴 때
+
+**중요 정보:**
+- 구체적인 수치를 포함하세요 (예: "5초 → 30초 소요")
+- 프로젝트 크기와 특성을 명시하세요 (파일 수, 코드 라인 수)
+- VS Code의 "Developer: Show Running Extensions"에서 성능 데이터를 캡처해주세요
+
+---
+
+### 🎨 UI/UX 개선 제안하기
+
+**언제 사용하나요?**
+- 인터페이스가 직관적이지 않을 때
+- 더 나은 사용자 경험을 제안할 때
+- 접근성 개선이 필요할 때
+
+**작성 팁:**
+- 가능하다면 목업이나 스크린샷을 첨부하세요
+- 다른 도구의 좋은 사례를 참고로 제시하세요
+- 사용 빈도를 명시하면 우선순위 결정에 도움이 됩니다
+
+---
+
+## 💬 커뮤니티
+
+### Discord 및 토론 참여
+
+- 💭 **GitHub Discussions**: [토론 참여](../../discussions)
+- 🎮 **Discord**: [discord.gg/prism-code](https://discord.gg/Pr9SuQJzkG)
+- 🌐 **공식 웹사이트**: [prismcode.plus](https://prismcode.plus)
+
+---
+
+## ❓ 자주 묻는 질문 (FAQ)
+
+### 이슈 등록 관련
+
+**Q: 이슈를 등록했는데 응답이 없어요**
+A: 이슈는 우선순위와 리소스에 따라 처리됩니다. 중요한 이슈는 라벨과 반응(👍)을 통해 우선순위가 올라갈 수 있습니다. 급한 문제는 [Discord](https://discord.gg/Pr9SuQJzkG)에서 문의해주세요.
+
+**Q: 버그인지 확실하지 않은데 어떻게 하나요?**
+A: 확실하지 않다면 [GitHub Discussions](../../discussions)에 질문을 올려주세요. 커뮤니티나 팀이 확인 후 버그로 판단되면 이슈로 전환할 수 있습니다.
+
+**Q: 중복된 이슈를 올렸어요**
+A: 괜찮습니다! 팀이 확인 후 `duplicate` 라벨을 붙이고 원본 이슈로 안내해드립니다. 원본 이슈에 👍를 눌러 관심을 표시해주세요.
+
+**Q: 기능 요청이 거부될 수도 있나요?**
+A: 네, 모든 기능 요청이 구현되는 것은 아닙니다. 제품 방향성, 기술적 제약, 리소스 등을 고려하여 결정됩니다. 거부된 경우 `wontfix` 라벨과 함께 이유를 설명드립니다.
+
+### 기술적 질문
+
+**Q: 어떤 AI 모델로 테스트해야 하나요?**
+A: 버그 리포트는 **Claude Sonnet 4.5** 또는 동급 이상의 모델로 재현 가능해야 합니다. Prism은 복잡한 프롬프트를 사용하므로 성능이 낮은 모델에서는 정상 작동하지 않을 수 있습니다.
+
+**Q: 로그나 디버그 정보는 어떻게 수집하나요?**
+A:
+- **VS Code**: `Help > Toggle Developer Tools` → Console 탭
+- **Output 패널**: `View > Output` → "Prism Code Plus" 선택
+- **성능 프로파일링**: `Cmd/Ctrl+Shift+P` → "Developer: Show Running Extensions"
+
+**Q: API 키 관련 문제는 여기에 올리나요?**
+A: 아니요. API 키, 결제, 계정 관련 문제는 보안을 위해 이슈 트래커에 올리지 마세요. [Discord](https://discord.gg/Pr9SuQJzkG)에서 DM으로 문의하거나 공식 지원 채널을 이용해주세요.
+
+**Q: 보안 취약점을 발견했어요**
+A: **절대 이슈로 등록하지 마세요.** 보안 문제는 다음 방법으로 비공개로 보고해주세요:
+- Discord에서 운영자에게 DM
+- 이메일: security@prismcode.plus (가능한 경우)
+- GitHub Security Advisory (활성화된 경우)
+
+### 기여 관련
+
+**Q: 코드로 기여할 수 있나요?**
+A: Prism Code Plus는 비공개 저장소에서 개발되므로 직접적인 코드 기여는 받지 않습니다. 대신 이슈 보고, 기능 제안, 문서 개선 아이디어 등으로 기여해주세요.
+
+**Q: 번역을 도와주고 싶어요**
+A: 번역 관련 기여는 환영합니다! 📖 **문서 개선** 템플릿을 사용하여 번역 제안을 올려주세요.
+
+**Q: 이슈 템플릿을 사용하지 않아도 되나요?**
+A: 템플릿 사용을 강력히 권장합니다. 필수 정보가 누락되면 이슈 처리가 지연될 수 있습니다. 특별한 경우가 아니라면 적절한 템플릿을 선택해주세요.
+
+### 기타
+
+**Q: Prism Code Plus는 오픈소스인가요?**
+A: 아니요, Prism Code Plus는 비공개 소스 프로젝트입니다. 이 저장소는 이슈 추적 및 커뮤니티 피드백을 위한 공개 트래커입니다.
+
+**Q: 언제 새 버전이 출시되나요?**
+A: 릴리즈 일정은 [GitHub Releases](../../releases) 또는 [Discord](https://discord.gg/Pr9SuQJzkG)에서 확인할 수 있습니다.
+
+**Q: 이 프로젝트가 제 회사/프로젝트에 적합한가요?**
+A: 자세한 기능과 가격 정보는 [공식 웹사이트](https://prismcode.plus)를 참고하거나 Discord에서 문의해주세요.
+
+---
+
+## 🎯 이 저장소에서 다루는 것
+
+### ✅ 받아들이는 이슈
+
+- 🐛 **버그 리포트** - 오류, 크래시, 예상치 못한 동작
+- ✨ **기능 요청** - 새로운 기능이나 개선 아이디어
+- 📖 **문서 개선** - 문서 오류, 누락, 설명 개선
+- ⚡ **성능 이슈** - 느린 응답, 높은 리소스 사용
+- 🎨 **UI/UX 개선** - 인터페이스나 사용성 개선
+- 🔌 **MCP 통합 아이디어** - Model Context Protocol 관련 제안
+- 💡 **일반 피드백** - 기타 의견 및 제안
+
+### ❌ 받아들이지 않는 것
+
+- 💻 **Pull Request** - 비공개 저장소이므로 코드 기여 불가
+- 🔐 **보안 취약점** - 반드시 비공개로 보고 (FAQ 참조)
+- 🆘 **일반 지원 질문** - [Discord](https://discord.gg/Pr9SuQJzkG) 이용
+- 📧 **개인 API 키 문제** - 지원 팀에 문의
+- 🎓 **사용법 질문** - [Discussions](../../discussions) 또는 Discord 이용
+
+---
+
+## ⚠️ 중요 사항
+
+### 비공개 개발 저장소
+
+Prism Code Plus의 메인 코드베이스는 **비공개 저장소**에서 개발됩니다. 이 공개 트래커는 다음을 위해 운영됩니다:
+
+- 커뮤니티 피드백을 투명하게 수집
+- 버그와 기능 요청을 공개적으로 추적
+- 사용자와의 열린 소통 유지
+- 독점 코드 및 초기 개발 작업 보호
+
+### 🔒 보안 이슈 보고
+
+**보안 취약점은 절대 여기에 올리지 마세요!**
+
+보안 문제를 발견하면 다음 채널을 통해 비공개로 보고해주세요:
+- **Discord**: 운영자에게 DM
+- **이메일**: security@prismcode.plus (가능한 경우)
+- **GitHub Security Advisory** (활성화된 경우)
+
+---
+
+## 📊 이슈 라벨 및 상태
+
+이슈 상태를 추적하기 위해 다음 라벨을 사용합니다:
+
+- 🏷️ **bug** - 확인된 버그
+- 🏷️ **enhancement** - 기능 요청
+- 🏷️ **documentation** - 문서 개선
+- 🏷️ **performance** - 성능 이슈
+- 🏷️ **ui/ux** - UI/UX 개선
+- 🏷️ **good first issue** - 초보자도 쉽게 기여할 수 있는 이슈
+- 🏷️ **help wanted** - 커뮤니티 의견이 필요한 이슈
+- 🏷️ **wontfix** - 구현되지 않을 이슈
+- 🏷️ **duplicate** - 중복 이슈
+- 🏷️ **investigating** - 조사 중
+- 🏷️ **in progress** - 작업 중
+- 🏷️ **needs more info** - 추가 정보 필요
+
+---
+
+## 🙏 감사합니다!
+
+여러분의 피드백은 Prism Code Plus를 모두를 위해 더 나은 제품으로 만드는 데 큰 도움이 됩니다. 모든 이슈를 읽고 있으며 커뮤니티 기여에 감사드립니다!
+
+**Built with ❤️ by the Prism Code Plus Team**
+
+---
+
+**참고:** 이 저장소는 이슈 추적 전용입니다. Prism Code Plus의 메인 코드베이스는 비공개입니다.
+지원이 필요하면 [Discord](https://discord.gg/prism-code) 또는 [공식 문서](https://prismcode.plus/docs)를 방문해주세요.

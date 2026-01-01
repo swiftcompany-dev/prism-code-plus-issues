@@ -1,0 +1,97 @@
+name: 📖 문서 개선
+description: 문서의 오류, 누락, 개선 사항을 제안합니다
+labels: ['documentation']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **문서 개선에 기여해주셔서 감사합니다!**
+        명확하고 정확한 문서는 모든 사용자에게 도움이 됩니다.
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: 문서 유형
+      description: 어떤 종류의 문서에 대한 제안인가요?
+      options:
+        - 사용 가이드 / 튜토리얼
+        - API 문서
+        - 설정 가이드
+        - 예제 코드
+        - FAQ
+        - README / 시작 가이드
+        - 릴리즈 노트
+        - 기타
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: doc-location
+    attributes:
+      label: 문서 위치
+      description: 관련 문서의 URL이나 위치를 알려주세요.
+      placeholder: '예: https://prismcode.plus/docs/getting-started 또는 "README.md 파일의 설치 섹션"'
+    validations:
+      required: false
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 문제 유형
+      description: 어떤 종류의 문제인가요?
+      options:
+        - 오류 정보 (잘못된 설명, 오타)
+        - 누락된 정보
+        - 불명확한 설명
+        - 오래된 정보 (업데이트 필요)
+        - 예제 코드 오류
+        - 번역 관련
+        - 기타
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: 현재 문서 내용
+      description: 문제가 있는 현재 문서 내용을 인용해주세요.
+      placeholder: |
+        현재 문서에는 이렇게 작성되어 있습니다:
+        > "..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: 문제 설명
+      description: 무엇이 잘못되었거나 불충분한지 구체적으로 설명해주세요.
+      placeholder: |
+        예:
+        - 단계 3의 설명이 실제 동작과 다릅니다
+        - [기능]에 대한 설명이 빠져 있습니다
+        - 스크린샷이 오래되어 현재 UI와 다릅니다
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: 제안하는 개선 사항
+      description: 어떻게 개선되면 좋을지 제안해주세요.
+      placeholder: |
+        다음과 같이 수정/추가하면 좋을 것 같습니다:
+        - [제안하는 내용]
+        - 또는 예시 코드 제공
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 추가 정보
+      description: 스크린샷, 참고 링크 등 도움이 될 만한 정보를 추가해주세요.
+    validations:
+      required: false

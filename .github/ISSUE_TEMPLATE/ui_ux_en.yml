@@ -1,0 +1,113 @@
+name: 🎨 UI/UX Improvement (English)
+description: Suggest improvements for user interface or user experience
+labels: ['ui/ux']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you for your UI/UX improvement suggestions!**
+        Your feedback is important for creating a better user experience.
+
+  - type: dropdown
+    id: ui-ux-category
+    attributes:
+      label: Improvement Category
+      description: Which part of UI/UX would you like to improve?
+      options:
+        - Chat Interface
+        - Settings Screen
+        - File Tree / Explorer
+        - Code Editor Integration
+        - Notifications & Feedback
+        - Icons / Colors / Themes
+        - Shortcuts / Keyboard Navigation
+        - Onboarding / Tutorial
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-experience
+    attributes:
+      label: Current User Experience
+      description: What inconvenience or problem currently exists?
+      placeholder: |
+        e.g.,
+        - When using [feature], [action] is not intuitive
+        - [UI element] is too small and difficult to click
+        - [Task] requires too many steps
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: Please specifically describe how it could be improved.
+      placeholder: |
+        e.g.,
+        - Moving [UI element] to [location] would make it more accessible
+        - Adding tooltips to [button] would make usage clearer
+        - Adding [shortcut] would increase work efficiency
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Usage Frequency
+      description: How often do you use this UI/UX element?
+      options:
+        - Very often (multiple times a day)
+        - Often (at least once a day)
+        - Moderate (several times a week)
+        - Occasionally (less than once a week)
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: Design Mockup / Screenshot (Optional)
+      description: |
+        If you have mockups, screenshots, or examples of similar UI from other tools showing your suggested UI/UX, please attach them.
+        You can drag and drop or paste images.
+    validations:
+      required: false
+
+  - type: textarea
+    id: similar-examples
+    attributes:
+      label: Similar Examples
+      description: If there are examples of similar features well implemented in other tools or apps, please share them.
+      placeholder: |
+        e.g.,
+        - It would be good to implement like [feature] in VS Code
+        - [Tool name]'s [UI] is a good reference
+    validations:
+      required: false
+
+  - type: dropdown
+    id: accessibility
+    attributes:
+      label: Accessibility Related
+      description: Is this improvement related to accessibility (visual, auditory, motor disabilities, etc.)?
+      options:
+        - No
+        - Yes - Visual related
+        - Yes - Keyboard navigation related
+        - Yes - Screen reader related
+        - Yes - Other accessibility
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Please add any other helpful information.
+    validations:
+      required: false

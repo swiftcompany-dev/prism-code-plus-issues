@@ -1,0 +1,97 @@
+name: 📖 文档改进 (中文)
+description: 建议文档错误、遗漏或改进事项
+labels: ['documentation']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **感谢您为文档改进做出贡献!**
+        清晰准确的文档对所有用户都有帮助。
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: 文档类型
+      description: 这是关于哪种类型文档的建议?
+      options:
+        - 使用指南 / 教程
+        - API文档
+        - 配置指南
+        - 示例代码
+        - FAQ
+        - README / 入门指南
+        - 发布说明
+        - 其他
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: doc-location
+    attributes:
+      label: 文档位置
+      description: 请提供相关文档的URL或位置。
+      placeholder: '例如: https://prismcode.plus/docs/getting-started 或 "README.md文件的安装部分"'
+    validations:
+      required: false
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 问题类型
+      description: 这是什么类型的问题?
+      options:
+        - 错误信息 (错误描述、拼写错误)
+        - 缺失信息
+        - 不清楚的说明
+        - 过时信息 (需要更新)
+        - 示例代码错误
+        - 翻译相关
+        - 其他
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: 当前文档内容
+      description: 请引用有问题的当前文档内容。
+      placeholder: |
+        当前文档中这样写道:
+        > "..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: 问题描述
+      description: 请具体说明什么是错误的或不充分的。
+      placeholder: |
+        例如:
+        - 步骤3的描述与实际操作不同
+        - 缺少关于[功能]的说明
+        - 截图已过时，与当前UI不同
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: 建议的改进
+      description: 请建议如何改进。
+      placeholder: |
+        建议这样修改/添加:
+        - [建议的内容]
+        - 或提供示例代码
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 附加信息
+      description: 请添加任何有用的信息，如截图、参考链接等。
+    validations:
+      required: false

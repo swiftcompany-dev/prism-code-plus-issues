@@ -1,0 +1,113 @@
+name: 🎨 UI/UX改进 (中文)
+description: 建议用户界面或用户体验改进
+labels: ['ui/ux']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **感谢您提出UI/UX改进建议!**
+        您的反馈对于创造更好的用户体验非常重要。
+
+  - type: dropdown
+    id: ui-ux-category
+    attributes:
+      label: 改进类别
+      description: 您想改进哪个部分的UI/UX?
+      options:
+        - 聊天界面
+        - 设置屏幕
+        - 文件树 / 资源管理器
+        - 代码编辑器集成
+        - 通知和反馈
+        - 图标 / 颜色 / 主题
+        - 快捷键 / 键盘导航
+        - 入门 / 教程
+        - 其他
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-experience
+    attributes:
+      label: 当前用户体验
+      description: 当前存在什么不便或问题?
+      placeholder: |
+        例如:
+        - 使用[功能]时，[操作]不直观
+        - [UI元素]太小，难以点击
+        - [任务]需要太多步骤
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: 建议的改进
+      description: 请具体描述如何改进会更好。
+      placeholder: |
+        例如:
+        - 将[UI元素]移动到[位置]会更容易访问
+        - 为[按钮]添加工具提示会使用法更清晰
+        - 添加[快捷键]会提高工作效率
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 使用频率
+      description: 您多久使用一次这个UI/UX元素?
+      options:
+        - 非常频繁 (每天多次)
+        - 频繁 (每天至少一次)
+        - 中等 (每周多次)
+        - 偶尔 (每周少于一次)
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: 设计模型 / 截图 (可选)
+      description: |
+        如果您有展示建议UI/UX的模型、截图或其他工具的类似UI示例，请附上。
+        您可以拖放或粘贴图片。
+    validations:
+      required: false
+
+  - type: textarea
+    id: similar-examples
+    attributes:
+      label: 类似示例
+      description: 如果其他工具或应用中有类似功能的良好实现示例，请分享。
+      placeholder: |
+        例如:
+        - 如果像VS Code的[功能]那样实现会很好
+        - [工具名称]的[UI]是一个很好的参考
+    validations:
+      required: false
+
+  - type: dropdown
+    id: accessibility
+    attributes:
+      label: 无障碍访问相关
+      description: 这项改进是否与无障碍访问(视觉、听觉、运动障碍等)有关?
+      options:
+        - 否
+        - 是 - 视觉相关
+        - 是 - 键盘导航相关
+        - 是 - 屏幕阅读器相关
+        - 是 - 其他无障碍访问
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 附加信息
+      description: 请添加任何其他有用的信息。
+    validations:
+      required: false

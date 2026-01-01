@@ -1,0 +1,69 @@
+name: 🐛 버그 리포트
+description: 버그를 신고합니다
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **중요:** 모든 버그 리포트는 Claude Sonnet 4.5를 사용하여 재현 가능해야 합니다. Prism은 복잡한 프롬프트를 사용하므로 성능이 낮은 모델에서는 예상대로 작동하지 않을 수 있습니다.
+  - type: dropdown
+    id: plugin-type
+    attributes:
+      label: 플러그인 유형
+      description: 어떤 플러그인에 대한 버그를 신고하시나요?
+      options:
+        - VSCode 확장
+        - CLI
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: prism-version
+    attributes:
+      label: Prism Code+ 버전
+      description: 어떤 버전의 Prism Code+을 사용하고 계신가요? (설정 뷰 하단에서 확인할 수 있습니다)
+      placeholder: '예: 1.2.3'
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 무슨 일이 발생했나요?
+      description: 또한 어떤 일이 일어날 것으로 예상하셨나요?
+      placeholder: 발생한 현상을 알려주세요!
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 단계
+      description: 이 버그를 어떻게 발생시키나요? 단계별로 설명해주세요.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  - type: input
+    id: provider-model
+    attributes:
+      label: 제공자/모델
+      description: 문제가 발생했을 때 어떤 제공자와 모델을 사용하고 계셨나요?
+      placeholder: '예: prism:anthropic/claude-sonnet-4.5, gemini:gemini-2.5-pro-exp-03-25'
+    validations:
+      required: false
+  - type: textarea
+    id: system-info
+    attributes:
+      label: 시스템 정보
+      description: 어떤 운영 체제와 하드웨어를 사용하고 계신가요?
+      placeholder: |
+        운영 체제: Windows 11, macOS Sonoma, Ubuntu 22.04 등
+        하드웨어: 관련이 있는 경우 CPU, GPU, RAM 사양
+        예:
+        OS: Windows 11
+        CPU: Intel Core i7-11700K
+        GPU: NVIDIA GeForce RTX 3070
+        RAM: 32GB DDR4
+    validations:
+      required: false

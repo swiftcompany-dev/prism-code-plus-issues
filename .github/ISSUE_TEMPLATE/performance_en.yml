@@ -1,0 +1,131 @@
+name: ⚡ Performance Issue (English)
+description: Report slow responses, high resource usage, and other performance issues
+labels: ['performance']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you for reporting a performance issue!**
+        Providing specific information will help us resolve the issue faster.
+
+  - type: dropdown
+    id: performance-type
+    attributes:
+      label: Performance Issue Type
+      description: What kind of performance issue is this?
+      options:
+        - Slow response time
+        - High CPU usage
+        - High memory usage
+        - Network latency
+        - UI rendering delay / freezing
+        - File processing speed
+        - Startup time delay
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: prism-version
+    attributes:
+      label: Prism Code+ Version
+      description: Which version of Prism Code+ are you using?
+      placeholder: 'e.g., 1.2.3'
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Please specifically describe the situation where the performance issue occurs.
+      placeholder: |
+        e.g.,
+        - When performing [task], it takes [time]
+        - When using [feature], CPU usage goes up to [percentage]%
+        - VS Code freezes in [situation]
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-performance
+    attributes:
+      label: Expected Performance
+      description: What level of performance did you expect?
+      placeholder: |
+        e.g., I expected [task] to complete within [time].
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide steps to reproduce the performance issue.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: input
+    id: provider-model
+    attributes:
+      label: Provider/Model
+      description: AI provider and model used when the issue occurred
+      placeholder: 'e.g., anthropic/claude-sonnet-4.5'
+    validations:
+      required: false
+
+  - type: textarea
+    id: project-details
+    attributes:
+      label: Project Information
+      description: Project size or characteristics may affect performance.
+      placeholder: |
+        - Project size: number of files, lines of code
+        - File types: JavaScript, Python, Java, etc.
+        - Project structure: monorepo, regular project, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Information
+      description: Hardware specifications
+      placeholder: |
+        OS: Windows 11 / macOS Sonoma / Ubuntu 22.04
+        CPU: Model name
+        RAM: Capacity
+        Disk: SSD / HDD
+
+        Example:
+        OS: macOS Sonoma
+        CPU: Apple M2 Pro
+        RAM: 32GB
+        Disk: 1TB SSD
+    validations:
+      required: false
+
+  - type: textarea
+    id: profiling-data
+    attributes:
+      label: Profiling Data (Optional)
+      description: |
+        If you have VS Code performance profiling data, please attach it.
+        - VS Code Command Palette (Cmd/Ctrl+Shift+P)
+        - Run "Developer: Show Running Extensions"
+        - Paste screenshot or data
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Please add screenshots, logs, or any other helpful information.
+    validations:
+      required: false

@@ -1,0 +1,131 @@
+name: ⚡ 성능 이슈
+description: 느린 응답, 높은 리소스 사용 등 성능 문제를 보고합니다
+labels: ['performance']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **성능 이슈를 보고해주셔서 감사합니다!**
+        구체적인 정보를 제공해주시면 문제를 더 빠르게 해결할 수 있습니다.
+
+  - type: dropdown
+    id: performance-type
+    attributes:
+      label: 성능 이슈 유형
+      description: 어떤 종류의 성능 문제인가요?
+      options:
+        - 느린 응답 속도
+        - 높은 CPU 사용률
+        - 높은 메모리 사용량
+        - 네트워크 지연
+        - UI 렌더링 지연 / 프리징
+        - 파일 처리 속도
+        - 시작 시간 지연
+        - 기타
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: prism-version
+    attributes:
+      label: Prism Code+ 버전
+      description: 어떤 버전의 Prism Code+을 사용하고 계신가요?
+      placeholder: '예: 1.2.3'
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: 문제 상황
+      description: 성능 이슈가 발생하는 상황을 구체적으로 설명해주세요.
+      placeholder: |
+        예:
+        - [작업]을 수행할 때 [시간]이 소요됩니다
+        - [기능] 사용 시 CPU 사용률이 [수치]%까지 올라갑니다
+        - [상황]에서 VS Code가 멈춥니다
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-performance
+    attributes:
+      label: 예상되는 성능
+      description: 어느 정도의 성능을 기대하셨나요?
+      placeholder: |
+        예: [작업]은 보통 [시간] 이내에 완료되어야 할 것으로 예상했습니다.
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: 재현 방법
+      description: 성능 이슈를 재현할 수 있는 단계를 알려주세요.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: input
+    id: provider-model
+    attributes:
+      label: 제공자/모델
+      description: 문제 발생 시 사용한 AI 제공자와 모델
+      placeholder: '예: anthropic/claude-sonnet-4.5'
+    validations:
+      required: false
+
+  - type: textarea
+    id: project-details
+    attributes:
+      label: 프로젝트 정보
+      description: 프로젝트 규모나 특성이 성능에 영향을 줄 수 있습니다.
+      placeholder: |
+        - 프로젝트 크기: 파일 수, 코드 라인 수
+        - 파일 유형: JavaScript, Python, Java 등
+        - 프로젝트 구조: 모노레포, 일반 프로젝트 등
+    validations:
+      required: false
+
+  - type: textarea
+    id: system-info
+    attributes:
+      label: 시스템 정보
+      description: 하드웨어 사양 정보
+      placeholder: |
+        OS: Windows 11 / macOS Sonoma / Ubuntu 22.04
+        CPU: 모델명
+        RAM: 용량
+        디스크: SSD / HDD
+
+        예:
+        OS: macOS Sonoma
+        CPU: Apple M2 Pro
+        RAM: 32GB
+        디스크: 1TB SSD
+    validations:
+      required: false
+
+  - type: textarea
+    id: profiling-data
+    attributes:
+      label: 프로파일링 데이터 (선택사항)
+      description: |
+        VS Code의 성능 프로파일링 데이터가 있다면 첨부해주세요.
+        - VS Code Command Palette (Cmd/Ctrl+Shift+P)
+        - "Developer: Show Running Extensions" 실행
+        - 스크린샷이나 데이터 붙여넣기
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 추가 정보
+      description: 스크린샷, 로그, 또는 기타 도움이 될 만한 정보를 추가해주세요.
+    validations:
+      required: false

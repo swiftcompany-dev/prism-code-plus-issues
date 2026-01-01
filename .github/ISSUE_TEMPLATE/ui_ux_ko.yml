@@ -1,0 +1,113 @@
+name: 🎨 UI/UX 개선
+description: 사용자 인터페이스나 사용자 경험 개선을 제안합니다
+labels: ['ui/ux']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **UI/UX 개선 제안을 주셔서 감사합니다!**
+        더 나은 사용자 경험을 만들기 위한 여러분의 의견이 중요합니다.
+
+  - type: dropdown
+    id: ui-ux-category
+    attributes:
+      label: 개선 카테고리
+      description: 어떤 부분의 UI/UX를 개선하고 싶으신가요?
+      options:
+        - 채팅 인터페이스
+        - 설정 화면
+        - 파일 트리 / 탐색기
+        - 코드 에디터 통합
+        - 알림 및 피드백
+        - 아이콘 / 색상 / 테마
+        - 단축키 / 키보드 조작
+        - 온보딩 / 튜토리얼
+        - 기타
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-experience
+    attributes:
+      label: 현재 사용자 경험
+      description: 현재 어떤 불편함이나 문제가 있나요?
+      placeholder: |
+        예:
+        - [기능]을 사용할 때 [동작]이 직관적이지 않습니다
+        - [UI 요소]가 너무 작아서 클릭하기 어렵습니다
+        - [작업]을 수행하려면 너무 많은 단계를 거쳐야 합니다
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: 제안하는 개선 사항
+      description: 어떻게 개선되면 좋을지 구체적으로 설명해주세요.
+      placeholder: |
+        예:
+        - [UI 요소]를 [위치]로 이동하면 더 접근하기 쉬울 것입니다
+        - [버튼]에 도구 설명(tooltip)을 추가하면 사용법을 알기 쉬울 것입니다
+        - [단축키]를 추가하면 작업 효율이 높아질 것입니다
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 사용 빈도
+      description: 이 UI/UX 요소를 얼마나 자주 사용하시나요?
+      options:
+        - 매우 자주 (하루에 여러 번)
+        - 자주 (하루에 한 번 이상)
+        - 보통 (일주일에 여러 번)
+        - 가끔 (일주일에 한 번 미만)
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: 디자인 목업 / 스크린샷 (선택사항)
+      description: |
+        제안하는 UI/UX를 시각적으로 보여주는 목업, 스크린샷, 또는 다른 도구의 유사한 UI 예시가 있다면 첨부해주세요.
+        이미지를 드래그 앤 드롭하거나 붙여넣기할 수 있습니다.
+    validations:
+      required: false
+
+  - type: textarea
+    id: similar-examples
+    attributes:
+      label: 유사 사례
+      description: 다른 도구나 앱에서 비슷한 기능이 잘 구현된 사례가 있다면 공유해주세요.
+      placeholder: |
+        예:
+        - VS Code의 [기능]처럼 구현되면 좋을 것 같습니다
+        - [도구 이름]의 [UI]가 좋은 참고 사례입니다
+    validations:
+      required: false
+
+  - type: dropdown
+    id: accessibility
+    attributes:
+      label: 접근성 관련 여부
+      description: 이 개선 사항이 접근성(시각, 청각, 운동 장애 등)과 관련이 있나요?
+      options:
+        - 아니오
+        - 예 - 시각 관련
+        - 예 - 키보드 내비게이션 관련
+        - 예 - 스크린 리더 관련
+        - 예 - 기타 접근성
+      default: 0
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 추가 정보
+      description: 기타 도움이 될 만한 정보를 추가해주세요.
+    validations:
+      required: false
