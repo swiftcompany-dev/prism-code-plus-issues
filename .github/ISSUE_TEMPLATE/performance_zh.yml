@@ -29,8 +29,8 @@ body:
   - type: input
     id: prism-version
     attributes:
-      label: Prism Code+ 版本
-      description: 您使用的是哪个版本的Prism Code+?
+      label: Prism Code Plus 版本
+      description: 您使用的是哪个版本的Prism Code Plus?
       placeholder: '例如: 1.2.3'
     validations:
       required: true

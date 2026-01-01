@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **重要:** すべてのバグレポートはClaude Sonnet 4.5で再現可能である必要があります。Prismは複雑なプロンプトを使用するため、性能の低いモデルでは期待通りに動作しない場合があります。
+        **重要:** すべてのバグレポートはClaude Sonnet 4.5で再現可能である必要があります。Prism Code Plusは複雑なプロンプトを使用するため、性能の低いモデルでは期待通りに動作しない場合があります。
   - type: dropdown
     id: plugin-type
     attributes:
@@ -20,8 +20,8 @@ body:
   - type: input
     id: prism-version
     attributes:
-      label: Prism Code+ バージョン
-      description: どのバージョンのPrism Code+を使用していますか? (設定画面の下部で確認できます)
+      label: Prism Code Plus バージョン
+      description: どのバージョンのPrism Code Plusを使用していますか? (設定画面の下部で確認できます)
       placeholder: '例: 1.2.3'
     validations:
       required: true

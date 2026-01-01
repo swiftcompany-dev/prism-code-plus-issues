@@ -29,8 +29,8 @@ body:
   - type: input
     id: prism-version
     attributes:
-      label: Prism Code+ Version
-      description: Which version of Prism Code+ are you using?
+      label: Prism Code Plus Version
+      description: Which version of Prism Code Plus are you using?
       placeholder: 'e.g., 1.2.3'
     validations:
       required: true

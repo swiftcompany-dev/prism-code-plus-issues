@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Important:** All bug reports should be reproducible using Claude Sonnet 4.5. Prism uses complex prompts and may not work as expected with lower-performing models.
+        **Important:** All bug reports should be reproducible using Claude Sonnet 4.5. Prism Code Plus uses complex prompts and may not work as expected with lower-performing models.
   - type: dropdown
     id: plugin-type
     attributes:
@@ -20,8 +20,8 @@ body:
   - type: input
     id: prism-version
     attributes:
-      label: Prism Code+ Version
-      description: Which version of Prism Code+ are you using? (You can find this at the bottom of the settings view)
+      label: Prism Code Plus Version
+      description: Which version of Prism Code Plus are you using? (You can find this at the bottom of the settings view)
       placeholder: 'e.g., 1.2.3'
     validations:
       required: true

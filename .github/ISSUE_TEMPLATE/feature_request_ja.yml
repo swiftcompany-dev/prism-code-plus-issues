@@ -14,7 +14,7 @@ body:
       label: 解決したい問題
       description: この機能が解決する問題や不便さを説明してください。明確なユースケースがあると助かります。
       placeholder: |
-        例: Prismを[状況]で使用するとき、[問題]が発生します。
+        例: Prism Code Plusを[状況]で使用するとき、[問題]が発生します。
         これにより[不便/制限]が生じます。
     validations:
       required: true
@@ -28,7 +28,7 @@ body:
         例: [機能]を追加すると[メリット]が得られます。
         動作方式:
         1. ユーザーが[アクション]を実行すると
-        2. Prismが[動作]を実行し
+        2. Prism Code Plusが[動作]を実行し
         3. [結果]が表示されます。
     validations:
       required: true

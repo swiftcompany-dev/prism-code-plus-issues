@@ -14,7 +14,7 @@ body:
       label: Problem to Solve
       description: Describe the problem or inconvenience this feature would address. Clear use cases are helpful.
       placeholder: |
-        e.g., When using Prism in [situation], [problem] occurs.
+        e.g., When using Prism Code Plus in [situation], [problem] occurs.
         This causes [inconvenience/limitation].
     validations:
       required: true
@@ -28,7 +28,7 @@ body:
         e.g., Adding [feature] would provide [benefit].
         How it works:
         1. When the user performs [action]
-        2. Prism executes [operation]
+        2. Prism Code Plus executes [operation]
         3. [Result] is displayed.
     validations:
       required: true

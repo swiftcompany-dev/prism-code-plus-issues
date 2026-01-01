@@ -29,8 +29,8 @@ body:
   - type: input
     id: prism-version
     attributes:
-      label: Prism Code+ バージョン
-      description: どのバージョンのPrism Code+を使用していますか?
+      label: Prism Code Plus バージョン
+      description: どのバージョンのPrism Code Plusを使用していますか?
       placeholder: '例: 1.2.3'
     validations:
       required: true

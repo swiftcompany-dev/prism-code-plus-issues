@@ -29,8 +29,8 @@ body:
   - type: input
     id: prism-version
     attributes:
-      label: Prism Code+ 버전
-      description: 어떤 버전의 Prism Code+을 사용하고 계신가요?
+      label: Prism Code Plus 버전
+      description: 어떤 버전의 Prism Code Plus를 사용하고 계신가요?
       placeholder: '예: 1.2.3'
     validations:
       required: true

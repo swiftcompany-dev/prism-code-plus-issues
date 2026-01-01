@@ -114,7 +114,7 @@ If you discover a security issue, please report it privately through:
 A: No, Prism Code Plus is a proprietary project. This repository is a public tracker for issues and community feedback only.
 
 **Q: Which AI model should I test with?**
-A: Bug reports should be reproducible using **Claude Sonnet 4.5** or equivalent. Prism uses complex prompts that may not work properly with lower-performance models.
+A: Bug reports should be reproducible using **Claude Sonnet 4.5** or equivalent. Prism Code Plus uses complex prompts that may not work properly with lower-performance models.
 
 **Q: Can I contribute code?**
 A: Since Prism Code Plus is developed in a private repository, we don't accept direct code contributions. However, you can contribute through issue reports, feature suggestions, and documentation improvements.
